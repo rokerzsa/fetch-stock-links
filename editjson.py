@@ -1,7 +1,7 @@
 import json
 exchanges = {
-    "BSE":"bseequitylist.json",
     "NSE":"nseequitylist.json",
+    "BSE":"bseequitylist.json"
 }
 inpt = []
 for key in exchanges:
@@ -13,7 +13,7 @@ for key in exchanges:
             details['SYMBOL'] = element['SYMBOL']
             details['NAME OF COMPANY'] = element['NAME OF COMPANY']
             details['SERIES'] = element['SERIES']
-            details['ISIN NUMBER'] = element['ISIN NUMBER']
+            details['ISIN NUMBER'] = element['ISIN NUMBER']            
             details['EXCHANGE'] = key
             inpt.append(details)
     file.close()
